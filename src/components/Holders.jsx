@@ -23,12 +23,12 @@ function Holders() {
         <div className='flex gap-2 justify-center'>
             <div className='flex flex-col items-end'>
                 <p className='text-[#00990F] font-bold'>211</p>
-                <p className='text-[11px] text-[#808080]'>RepT Holders</p>
+                <p className='text text-[#808080]'>RepT Holders</p>
             </div>
             <div className='border-r-2 border-stone-300'></div>
             <div>
                 <p className='text-[#00990F] font-bold'>145</p>
-                <p className='text-[11px] text-[#808080]'>RepT in circulation</p>
+                <p className='text text-[#808080]'>RepT in circulation</p>
             </div>
         </div>
 

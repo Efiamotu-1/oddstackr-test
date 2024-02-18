@@ -41,12 +41,12 @@ function UserProfile() {
          <div className='flex gap-2 justify-center'>
             <div className='flex flex-col items-end'>
                 <p className='text-[#00990F] font-bold'>{user.id}</p>
-                <p className='text-[11px] text-[#808080]'>Number of RepT Held</p>
+                <p className='text text-[#808080]'>Number of RepT Held</p>
             </div>
             <div className='border-r-2 border-stone-300'></div>
             <div>
                 <p className='text-[#00990F] font-bold'>~${user.address.zipcode.split('-')[0]}</p>
-                <p className='text-[11px] text-[#808080]'>Total RepT value</p>
+                <p className='text text-[#808080]'>Total RepT value</p>
             </div>
         </div>
         <ul className='flex gap-5 text-[10px] md:text-[14px] border-b border-stone-200 pb-1 text-[#808080] my-5 font-bold'>

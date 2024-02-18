@@ -27,14 +27,14 @@ function Modal() {
                <p className='text-[#100033] text-[18px] font-bold'>Bitcoin</p>
                   <img src={Verified} alt="verified icon" className='w-[15px] h-[15px]' />
                </div>
-               <button className='btn rounded-lg bg-[#CCFFD1] font-bold text-[#00990F] text-[11px]'>RepT Price: $4,343</button>
+               <button className='btn rounded-lg bg-[#CCFFD1] font-bold text-[#00990F] text'>RepT Price: $4,343</button>
                <p className='text-[9px] text-[#808080]'>Project royalty: 10%</p> 
             </div>
         </div>
 
-        <div className='flex gap-1 my-3 items-center text-[9px] md:text-[11px]'>
+        <div className='flex gap-1 my-3 items-center text-[9px] text'>
             <p>Amount in:</p>
-            <ul className='flex gap-2 text-[#4D4D4D] text-[9px] md:text-[11px]'>
+            <ul className='flex gap-2 text-[#4D4D4D] text-[9px] text'>
                 <li className='hover:font-bold hover:underline hover:underline-offset-8'>BNB</li>
                 <li className='hover:font-bold hover:underline hover:underline-offset-8'>USD</li>
             </ul>
@@ -80,7 +80,7 @@ function Modal() {
 
         <div className='text-center space-y-[-14px]'>
 
-        <button className='btn text-[9px] md:text-[11px] text-[#EEE5FF] px-4 md:px-8 bg-[#5404FF] my-5' onClick={() => {
+        <button className='btn text text-[#EEE5FF] px-4 md:px-8 bg-[#5404FF] my-5' onClick={() => {
             setShowPaymentModal(true)
             setShowBuyModal(false)
         }}>Confirm Purchase</button>
@@ -101,7 +101,7 @@ function Modal() {
         <img src={Close} onClick={() => setShowModal(false)} alt="close-btn" className='fixed right-3 top-3 w-[15px] md:w-[25px]'/>
         <div className='text-[#100033] p-5'>Transfer successful</div>
         <img src={GreenIcon} alt="green-icon" />
-        <button className='btn text-[9px] md:text-[11px] text-[#EEE5FF] px-4 md:px-8 bg-[#5404FF] my-5'>View on BSC scan</button>
+        <button className='btn text text-[#EEE5FF] px-4 md:px-8 bg-[#5404FF] my-5'>View on BSC scan</button>
             </div>}
         </div>
     </div>
