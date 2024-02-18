@@ -51,7 +51,7 @@ function UserProfile() {
             </div>
         </div>
         <ul className='flex gap-5 text-[10px] md:text-[14px] border-b border-stone-200 pb-1 text-[#808080] my-5 font-bold'>
-            <li c onClick={() => dispatch({type: 'showOwned'})}>RepT owned</li>
+            <li onClick={() => dispatch({type: 'showOwned'})}>RepT owned</li>
             <li className='hover:text-[#5404FF] hover:underline hover:underline-offset-8' onClick={() => dispatch({type: 'showReceived'})}>RepT received</li>
             <li className='hover:text-[#5404FF] hover:underline hover:underline-offset-8' onClick={() => dispatch({type: 'showProject'})}>Project owned</li>
         </ul>
