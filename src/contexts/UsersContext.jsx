@@ -10,7 +10,6 @@ function UserProvider({children}) {
             const res = await fetch('https://jsonplaceholder.typicode.com/users')
             const data = await res.json()
             setUsers(data)
-            console.log(data)
         }
 
         fetchUser()

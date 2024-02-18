@@ -9,14 +9,14 @@ function Holders() {
     const {users} = useUsers()
     const navigate = useNavigate()
   return (
-    <div className=''>
-        <div className='grid grid-rows-[50%_1fr_1fr_1fr] grid-cols-1 justify-items-center h-[300px] w-[300px] p-[2rem] bg-white rounded-full m-auto my-[5rem] outline outline-offset-[20px] outline-1 outline-white outline-dashed'>
+    <div className='text'>
+        <div className='grid grid-rows-[50%_1fr_1fr_1fr] justify-items-center h-[300px] w-[300px] p-[2rem] bg-white rounded-full m-auto my-[5rem] outline outline-offset-[20px] outline-1 outline-white outline-dashed'>
             <img src={ProfileCircle} alt="profile circle" className='w-[100px] h-[100px] m-auto' />
             <div className='flex gap-1 items-center'>
                 <p className='text-[#100033] text-[28px] font-bold'>Polygon</p>
                 <img src={Verified} alt="verified icon" className='w-[25px] h-[25px]' />
             </div>
-            <p className='text-[#CC9200] font-bold'>$BAYC</p>
+            <p className='text-[#CC9200] font-bold mt-2'>$BAYC</p>
             <button className='btn bg-[#CCFFD1] font-bold text-[#00990F]'>Price: $4,343</button>
         </div>
 
@@ -40,7 +40,7 @@ function Holders() {
              <div className='justify-self-end'>Market Value</div>  
         </div>
             {users ? users.map((user) => (
-                <div key={user.id} onClick={() => navigate(`/user-profile/${user.id}`)} className='grid grid-cols-3 gap-5 items-center p-1 border-b border-stone-300 cursor-pointer'>
+                <div key={user.id} onClick={() => navigate(`/user-profile/${user.id}`)} className='grid grid-cols-3 gap-5 items-center p-1 border-b border-stone-200 cursor-pointer'>
                     <div className='text-[#5404FF]'>{user.name}</div>
                     <div className='justify-self-center text-[#4D4D4D]'>{user.id}</div>
                     <div className='justify-self-end text-[#00990F] font-bold'>${user.address.zipcode.split('-')[0]}K</div>
