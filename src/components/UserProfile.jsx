@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
-import { Outlet, useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useUsers } from '../contexts/UsersContext'
-import RepT from './RepTOwned'
 import RepTOwned from './RepTOwned'
 import ReptReceived from './ReptReceived'
 import Project from './Project'

@@ -1,7 +1,6 @@
 import React from 'react'
 import Verified from '../assets/Vector.png'
 import DownArrow from '../assets/down-arrow.png'
-import Close from '../assets/close.png'
 
 import { useUsers } from '../contexts/UsersContext'
 import { useModal } from '../contexts/ModalContext'

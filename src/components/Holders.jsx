@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ProfileCircle from '../assets/Profile-circles.png'
 import Verified from '../assets/Vector.png'
 import { useUsers } from '../contexts/UsersContext'
