@@ -32,7 +32,7 @@ function Holders() {
             </div>
         </div>
 
-    <div className='my-[3rem]'>
+    <div className='my-[3rem] h-[200px] overflow-y-scroll'>
 
         <div className='grid grid-cols-3 gap-1 items-center p-1 font-bold'>
             <div className=''>Address</div>
