@@ -13,7 +13,6 @@ function App() {
     <div className="md:px-[5rem] p-5">
       <UserProvider>
         <ModalProvider>
-
               <Navbar />
           <Routes>
               <Route path="/" element={<Holders />}/>

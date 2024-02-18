@@ -33,7 +33,7 @@ function Holders() {
             </div>
         </div>
 
-    <div className='my-[3rem] '>
+    <div className='my-[3rem] h-screen'>
 
         <div className='grid grid-cols-3 gap-1 items-center p-1 font-bold sticky top-0 z-20 border-b bg-[#EBEDF2] border-stone-300'>
             <div className=''>Address</div>
