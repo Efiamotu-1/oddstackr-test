@@ -3,10 +3,11 @@ import ProfileCircle from '../assets/Profile-circles.png'
 import Verified from '../assets/Vector.png'
 import { useUsers } from '../contexts/UsersContext'
 import { useNavigate } from 'react-router-dom'
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 function Holders() {
 
-    const {users} = useUsers()
+    const {comments, hasMore, fetchMoreData} = useUsers()
     const navigate = useNavigate()
   return (
     <div className='text'>
@@ -32,20 +33,28 @@ function Holders() {
             </div>
         </div>
 
-    <div className='my-[3rem] h-[200px] overflow-y-scroll'>
+    <div className='my-[3rem] '>
 
-        <div className='grid grid-cols-3 gap-1 items-center p-1 font-bold'>
+        <div className='grid grid-cols-3 gap-1 items-center p-1 font-bold sticky top-0 z-20 border-b bg-[#EBEDF2] border-stone-300'>
             <div className=''>Address</div>
             <div className='justify-self-center'>BAYC held</div>
              <div className='justify-self-end'>Market Value</div>  
         </div>
-            {users ? users.map((user) => (
-                <div key={user.id} onClick={() => navigate(`/user-profile/${user.id}`)} className='grid grid-cols-3 gap-5 items-center p-1 border-b border-stone-200 cursor-pointer'>
-                    <div className='text-[#5404FF]'>{user.name}</div>
-                    <div className='justify-self-center text-[#4D4D4D]'>{user.id}</div>
-                    <div className='justify-self-end text-[#00990F] font-bold'>${user.address.zipcode.split('-')[0]}K</div>
+        <InfiniteScroll
+        dataLength={comments.length}
+        next={fetchMoreData}
+        hasMore={hasMore}
+        loader={<h4 className='text-center my-5'>Loading More data...</h4>}
+        endMessage={<p>No more items to load</p>}
+      >
+            {comments ? comments.map((comment, index) => (
+                <div key={index} onClick={() => navigate(`/user-profile/${comment.id}`)} className='grid grid-cols-3 gap-5 items-center p-1 border-b border-stone-200 cursor-pointer'>
+                    <div className='text-[#5404FF]'>{comment.name.split(' ')[1]}</div>
+                    <div className='justify-self-center text-[#4D4D4D]'>{comment.id}</div>
+                    <div className='justify-self-end text-[#00990F] font-bold'>${comment.id}K</div>
                  </div>
             )) : <div className='text-center my-5'>Loading...</div>}
+        </InfiniteScroll>    
       </div>
                 
             

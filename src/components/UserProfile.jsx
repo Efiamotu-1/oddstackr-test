@@ -33,6 +33,8 @@ function UserProfile() {
     const [{reptOwned, reptReceived, project}, dispatch] = useReducer(tabReducer, initialState)
 
   return (
+    <>
+     {user ? 
     <div className='my-5'>
         <div className='flex gap-2 justify-center items-center my-3'>
             <p className=''>{user?.email}</p>
@@ -58,7 +60,10 @@ function UserProfile() {
         {reptOwned && <RepTOwned />}
         {reptReceived && <ReptReceived />}
         {project && <Project />}
-    </div>
+    </div> : <div className='my-5 text-center'>Please go back there is currently no information for this user, kindly <strong>click on the first 10 user</strong></div>
+    }
+    </>
+   
   )
 }
 
