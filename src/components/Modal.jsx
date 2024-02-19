@@ -13,7 +13,7 @@ function Modal() {
     const [showPaymentModal, setShowPaymentModal] = useState(false)
     const {setShowModal} = useModal()
   return (
-    <div className='fixed top-0 left-0 w-full h-screen bg-[#0000004D] z-10' onClick={() => setShowModal(false)}>
+    <div className='fixed top-0 left-0 w-full h-screen bg-[#0000004D] z-10'>
         <div className='fixed top-[50%] left-[50%] w-3/4 md:w-1/2 translate-x-[-50%] translate-y-[-50%] bg-white rounded-lg p-3'>
         {showBuyModal && 
         <div className='px-2 md:px-5 h-[500px] overflow-y-scroll'>
@@ -84,7 +84,7 @@ function Modal() {
             setShowPaymentModal(true)
             setShowBuyModal(false)
         }}>Confirm Purchase</button>
-        <div className='text text-[#4D4D4D] flex items-center justify-center gap-2' onClick={() => setShowAdvanced(show => !show)}>
+        <div className='text text-[#4D4D4D] flex items-center justify-center gap-2 cursor-pointer' onClick={() => setShowAdvanced(show => !show)}>
             <p>Advanced settings</p>
             {showAdvanced ? 
             <img src={ArrowUp}  alt="arrow-up" className='w-[10px]'/> :
